@@ -5,7 +5,7 @@ module.exports = {
     app: './js/app.js',
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'html'),
     clean: true,
     filename: './js/app.js',
   },
