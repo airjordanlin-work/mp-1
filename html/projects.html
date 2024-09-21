@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experiences</title>
+  <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body>
+<header>
+  <div class="projects-container">
+    <h1>Projects</h1>
+  </div>
+</header>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="experiences.html">Experiences</a></li>
+    <li><a href="achievements.html">Hobbies</a></li>
+    <li class="active"><a href="projects.html">Projects</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="button-container">
+    <label for="first">1st number:</label><input type="text" id="first">
+    <label for="second">2nd number:</label><input type="text" id="second">
+    <div class="button-container-one">
+      <button id="button" onclick="addition()">+</button>
+      <button id="button2" onclick="subtraction()">-</button>
+      <button id="button3" onclick="multiplication()">*</button>
+      <button id="button4" onclick="division()">/</button>
+      <button id="button5" onclick="myPower()">Power</button>
+      <button id="button6" onclick="clearAll()">Clear</button>
+    </div>
+    <div id="output"></div>
+  </div>
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+<footer>
+  <p>&copy; All rights reserved to Jordan Lin <a href="https://github.com/airjordanlin-work">Credits</a></p>
+</footer>
+</html>

@@ -1,0 +1,431 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+/* global rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main{
+  width: 70%;
+  margin-left:10%;
+}
+.education-attend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 10%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.education-attend h1, .education-attend h2 {
+  margin: 20px 0;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.link {
+  display: block;
+  margin: 10px 0;
+  padding: 15px;
+  width: 80%;
+  text-align: center;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #222;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link:hover {
+  background-color: orange;
+  transform: scale(1.05);
+}
+
+/* General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  background: linear-gradient(to right, orange, lightblue);
+  font-family: "Inter", sans-serif;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: red;
+  font-size: 1rem;
+  color: #222;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background-color: red;
+}
+
+.navbar {
+  position: fixed;
+  top: 7%;
+  background-color: red;
+  width: 20%;
+  height: 100vh;
+}
+
+.navbar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin: 12% 0;
+}
+
+/* Link Styles */
+.navbar ul li a {
+  font-family: "Gill Sans", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  padding: 20px 20px;
+  border: 5px solid white;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+  position: relative; /* Needed for the ::before to be positioned absolutely */
+}
+
+.navbar ul li a::before {
+  content: ""; /* Required to render the pseudo-element */
+  position: absolute; /* Positioning relative to the parent element */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: -1; /* Place behind the text */
+  transition: background-color 0.3s ease; /* Transition for the hover effect */
+}
+
+.navbar ul li a:hover::before {
+  background-color: orange;
+}
+
+
+/*.navbar ul li a::before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: 100%;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 4px;*/
+/*  background: linear-gradient(to right, orange, lightblue);*/
+/*  transform: scaleX(0);*/
+/*  transform-origin: bottom left;*/
+/*  transition: transform 0.4s ease-in-out;*/
+/*}*/
+
+/*.navbar ul li a:hover::before {*/
+/*  transform: scaleX(1);*/
+/*}*/
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Media Query Styles */
+@media screen and (max-width: 750px) {
+  main{
+    width: 100%;
+  }
+  .education-attend{
+    margin: auto;
+  }
+  html, body {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .navbar {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: red;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: row; /* Make the list items horizontal */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    margin: auto;
+  }
+
+  .navbar ul li a {
+    padding: 5px 5px; /* Adjust padding for horizontal layout */
+  }
+
+  /* Add an active class to highlight the current page */
+  /*a.active {*/
+  /*  background-color: #04AA6D;*/
+  /*  color: white;*/
+  /*}*/
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Customize the background color to match your design.
+   */
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+
+  /*
+   * A better looking default horizontal rule
+   */
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+
+  /*
+   * Remove default fieldset styles.
+   */
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  textarea {
+    resize: vertical;
+  }
+
+  /* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+  /* ==========================================================================
+     Helper classes
+     ========================================================================== */
+  /*
+   * Hide visually and from screen readers
+   */
+  .hidden,
+  [hidden] {
+    display: none !important;
+  }
+
+  /*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+  .visually-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+
+  /*
+   * Extends the .visually-hidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+  .visually-hidden.focusable:active,
+  .visually-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+
+  /*
+   * Hide visually and from screen readers, but maintain layout
+   */
+  .invisible {
+    visibility: hidden;
+  }
+
+  /*
+   * Clearfix: contain floats
+   *
+   * The use of `table` rather than `block` is only necessary if using
+   * `::before` to contain the top-margins of child elements.
+   */
+  .clearfix::before,
+  .clearfix::after {
+    content: "";
+    display: table;
+  }
+
+  .clearfix::after {
+    clear: both;
+  }
+
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+  @media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+  }
+
+  @media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
+
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+
+     */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
+
+    pre {
+      white-space: pre-wrap !important;
+    }
+
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
+}
+
