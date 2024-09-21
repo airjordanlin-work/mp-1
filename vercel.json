@@ -1,7 +1,7 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
-    { "source": "/html/education.html", "destination": "../html/education.html" },
+    { "source": "/education", "destination": "/html/education.html" },
     { "source": "/experiences", "destination": "/experiences.html" },
     { "source": "/hobbies", "destination": "/hobbies.html" }
   ]
